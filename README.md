@@ -15,11 +15,12 @@ TensorFlow-GPU-
       sudo chmod a+x NVIDIA-Linux-x86_64-390.67.run
       sudo gedit /etc/modprobe.d/blacklist.conf
    在最后一行后面添加
-      blacklist vga16fb
-      blacklist nouveau
-        blacklist rivafb
-        blacklist rivatv
-          blacklist nvidiafb
+   
+            blacklist vga16fb
+            blacklist nouveau
+            blacklist rivafb
+            blacklist rivatv
+            blacklist nvidiafb
     
 
 #### 没办法，只能退而求其次的选择CUDA9.1进行安装，[选择下载相应的cuDNN](https://developer.nvidia.com/rdp/cudnn-archive)
