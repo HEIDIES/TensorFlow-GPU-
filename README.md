@@ -60,3 +60,16 @@ TensorFlow-GPU-
    
       $ sudo cp cuDNN/cuda/include/cudnn.h /usr/local/cuda/include 
       $ sudo cp cuDNN/cuda/lib64/* /usr/local/cuda/lib64
+
+### 下载安装Anaconda，使用[清华大学开源软件镜像站进行下载并配置镜像](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/),其中Anaconda3-4.3.0.1-Linux-x86_64.sh对应python3.6.0，Anaconda3-5.1.0-Linux-x86_64.sh对应python3.6.3，以Anaconda3-5.1.0为例，创建tensorflow虚拟环境：
+      $ conda create --name=tensorflow -python=3.6.3
+   激活虚拟环境：
+   
+      $ source activate tensorflow
+   取消激活：
+      
+      $ source deactivate
+   在激活的环境下安装tensorflow-gpu版本，由于目前最新tensorflow-1.8.0尚不支持cuda-9.0以上的版本，需手动下载[Linux可用的CUDA-9.1版tensorflow-1.6.0](https://github.com/mind/wheels/releases/tag/tf1.6-gpu-cuda91)，选择下载tensorflow-1.6.0-cp36-cp36m-linux_x86_64.whl。下载完成后到对应路径下，运行：
+      
+      $ pip install xxx.whl
+   接下来，终于可以开始你的深度学习之旅了！！
