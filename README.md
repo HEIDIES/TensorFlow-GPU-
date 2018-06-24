@@ -11,9 +11,15 @@ TensorFlow-GPU-
 
 ### [获取并下载自己的GPU的最新驱动](https://www.nvidia.cn/Download/index.aspx?lang=cn) ，但很操蛋的是，目前官网上linux的驱动最新的版本只有390.67
 
-#### 安装英伟达GPU驱动：
-      手动安装390.67,
-      更改文件的执行权限 sudo chmod a+x NVIDIA-Linux-x86_64-390.67.run
+#### 安装英伟达GPU驱动：手动安装390.67,更改文件的执行权限 
+      sudo chmod a+x NVIDIA-Linux-x86_64-390.67.run
+      sudo gedit /etc/modprobe.d/blacklist.conf
+   在最后一行后面添加
+      blacklist vga16fb
+      blacklist nouveau
+        blacklist rivafb
+        blacklist rivatv
+          blacklist nvidiafb
     
 
 #### 没办法，只能退而求其次的选择CUDA9.1进行安装，[选择下载相应的cuDNN](https://developer.nvidia.com/rdp/cudnn-archive)
